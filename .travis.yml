@@ -8,8 +8,8 @@ jdk:
 sudo: false
 
 script:
-  - mvn test
   - mvn cobertura:cobertura
+  - mvn test
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)
